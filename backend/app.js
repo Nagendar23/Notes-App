@@ -287,5 +287,3 @@ app.listen(port,()=>{
 })
 
 
-// praneeth login token
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTI1NDZmY2YwOGYzZjY1OWIzM2NkZiIsImVtYWlsIjoicHJhbmVldGhAZ21haWwuY29tIiwiaWF0IjoxNzQ2MTEyNzMwLCJleHAiOjE3NDgyNzI3MzB9.KV-hpqhJvI1u2wwX0HIWApLApTOazl9bp2MB3yX_zXI
