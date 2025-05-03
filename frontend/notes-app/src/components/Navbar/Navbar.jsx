@@ -16,6 +16,8 @@ const Navbar = ({userInfo, onSearchNote, handleClearSearch}) => {
   }
 
   const handleSearch = () => {
+    console.log("Searching for:", searchQuery);
+
     if (searchQuery) {
         onSearchNote(searchQuery);
     }

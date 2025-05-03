@@ -171,7 +171,7 @@ const handleClearSearch = () => {
           <NoteCard 
             key={item._id}
             title={item.title} 
-            date={item.createdOn ? moment(item.createdOn).format("Do MMM YYYY") : ""}
+            date={item.createdOn} // <-- pass the raw date
             content={item.content}
             tags={item.tags}
             isPinned={item.isPinned}
