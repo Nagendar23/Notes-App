@@ -231,26 +231,24 @@ app.delete('/delete-note/:noteId',authenticateToken, async(req,res)=>{
 })
 
 //update isPinned value route
-app.put('/update-note-pinned/:noteId',authenticateToken, async(req,res)=>{
+app.put('/update-note-pinned/:noteId', authenticateToken, async (req, res) => {
     const noteId = req.params.noteId;
-    const {isPinned} = req.body;
+    const { isPinned } = req.body;
     const userId = req.user.id;
 
-    try{
-        const note = await Note.findOne({_id:noteId,userId});
-        if(!note){
-            console.log("Note not found")
-            return res.status(404).json({error:true, message:"Note not found"});
+    try {
+        const note = await Note.findOne({ _id: noteId, userId });
+        if (!note) {
+            console.log("Note not found");
+            return res.status(404).json({ error: true, message: "Note not found" });
         }
-        if(isPinned){
-            note.isPinned = isPinned || false;
-        }
+        note.isPinned = isPinned; 
         await note.save();
-        console.log("Note pinned value updated successfully",note);
-        return res.json({error:false,note,message:'Note pinned value updated successfully'});
-    }catch(err){
-        console.log("failed to update the pinned value",err);
-        return res.status(500).json({error:true,message:'Internal server error'});
+        console.log("Note pinned value updated successfully", note);
+        return res.json({ error: false, note, message: 'Note pinned value updated successfully' });
+    } catch (err) {
+        console.log("failed to update the pinned value", err);
+        return res.status(500).json({ error: true, message: 'Internal server error' });
     }
 })
 
