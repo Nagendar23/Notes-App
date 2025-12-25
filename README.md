@@ -3,7 +3,7 @@
 A full-stack note-taking application built with React, Express, and MongoDB. Create, edit, and manage your notes with ease.
 
 ## 🌐 Live Demo
-- **Frontend**: https://nagendar-notes.vercel.app/dashboard
+- **Frontend**: https://nagendar-notes.vercel.app/
 - **Backend API**: https://notes-app-l864.onrender.com/
 
 ## 📋 Features
